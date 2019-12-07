@@ -19,6 +19,8 @@ namespace tutoriales
         public Vector3 RecoilTarget;
         public float t;
 
+        public bool DisableLeftHand;
+        public bool DisableRightHand;
         public bool Aiming;
         public bool Shooting;
 
@@ -50,7 +52,7 @@ namespace tutoriales
             SetIk(AvatarIKGoal.RightHand, RightHandPosition, AvatarIKHint.RightElbow, RightElbowPosition, aim, RecoilTarget);
             if (LeftHandPosition != null)
             {
-                SetIk(AvatarIKGoal.LeftHand, LeftHandPosition, AvatarIKHint.LeftElbow, LeftElbowPosition, aim, Vector3.zero);
+                SetIk(AvatarIKGoal.LeftHand, LeftHandPosition, AvatarIKHint.LeftElbow, LeftElbowPosition, 1, Vector3.zero);
             }
 
 
